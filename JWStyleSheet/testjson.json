@@ -1,0 +1,48 @@
+{
+    "UIBarButtonItem" :
+    {
+        "text-attributes" : 
+        { 
+            "font" : "Helvetica",
+            "size" : 24,
+            "color" : "40FF00",
+            "shadow-color" : "FF00FF",
+            "shadow-offset" : "{3, -1}",
+        }
+    },
+    
+    "UIToolbar.UIBarButtonItem" :
+    {
+        "tintColor" : "FF00FF",
+        "title-offset" : "{10, 10}",
+        "background" : {
+            "name" : "TestButtonImage",
+            "caps" : "{0, 5, 0, 5}",
+        }
+    },
+    
+    "UINavigationBar.UIBarButtonItem" :
+    {
+        "tintColor" : "FFFF00",
+    },
+    
+    "UIToolbar" : 
+    {
+        "tintColor" : "800040",
+    },
+    
+    "UINavigationBar" :
+    {
+        "background" : "TestBarImage",
+        "tintColor" : "908400",
+        "title-offset" : 10,
+        "text-attributes" : 
+        { 
+            "font" : "Helvetica",
+            "size" : 10,
+            "color" : "FF00FF",
+            "shadow-color" : "0000FF",
+            "shadow-offset" : "{1, -1}",
+        }
+    }
+}
