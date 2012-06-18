@@ -40,9 +40,11 @@
         { 
             "font" : "Helvetica",
             "size" : 10,
-            "color" : "FF00FF",
-            "shadow-color" : "0000FF",
-            "shadow-offset" : "{1, -1}",
+            "shadow": {
+                "color":"0000FF", 
+                "x": 1, 
+                "y": -1
+            }
         }
     }
 }
