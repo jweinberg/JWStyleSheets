@@ -182,8 +182,21 @@
     UIFont *font = [UIFont fontWithName:fontName size:fontSize];
     UIColor *fontColor = [self parseColor:[val objectForKey:@"color"]];
     
-    UIColor *shadowColor = [self parseColor:[val objectForKey:@"shadow-color"]];
-    NSValue *shadowOffset = [NSValue valueWithUIOffset:UIOffsetFromString([val objectForKey:@"shadow-offset"])];
+    UIColor *shadowColor;
+    NSValue *shadowOffset;
+    NSDictionary *shadow = [val objectForKey:@"shadow"];
+    
+    if (shadow != nil)
+    {
+        shadowColor = [self parseColor:[shadow objectForKey:@"color"]];
+        shadowOffset = [NSValue valueWithUIOffset:UIOffsetMake([[shadow objectForKey:@"x"] doubleValue], [[shadow objectForKey:@"y"] doubleValue])];
+    }
+    else
+    {
+        shadowColor = [self parseColor:[val objectForKey:@"shadow-color"]];
+        shadowOffset = [NSValue valueWithUIOffset:UIOffsetFromString([val objectForKey:@"shadow-offset"])];
+    }
+    
     
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
     if (font)
